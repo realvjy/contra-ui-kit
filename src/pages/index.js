@@ -1,10 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { Link, graphql, withPrefix } from "gatsby"
+import Helmet from "react-helmet"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -13,7 +12,41 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
+      <Helmet>
+        <script src={withPrefix('sound.js')} type="text/javascript" loop />
+      </Helmet>
+      <section className="hero_section">
+        <audio id="contra_mp3" src="contra.mp3" preload="auto"/>
+        <div className="container">
+          <div className="hero_wrapper">
+            <div className="hero_img">
+              <img src="/screens.png" />
+            </div>
+            <div className="hero_details">
+              <div className="texts">
+                <h1>Open source wireframe kit</h1>
+                <p>More than 150+ Components and 50+ ready to use mobile screens. Have powerful design system to quickly design new screens.</p>
+              </div>
+
+              <div className="compatible">
+                <h3>Compitable with <img src="/figma.png"/> <img src="/sketch.png"/> <img src="xd.png"/> <img src="/studio.png"/></h3>
+              </div>
+
+              <div className="btn-lnks">
+                <div className="dwn-links">
+                  <a href="https://www.producthunt.com/upcoming/contra-wireframe-kit/" className="btn btn-download">
+                    <h4>Get it now</h4>
+                  </a>
+                </div>
+
+              </div>
+              <div className="license">
+                <p>Free for commercial and personal use under <a href="#">CC0 License</a> <a href="#">Disclamer</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </Layout>
   )
