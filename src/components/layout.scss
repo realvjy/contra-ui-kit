@@ -121,6 +121,9 @@ section{
     justify-content: space-between;
     align-items: center;
     padding: 60px 24px 20px 24px;
+    @media (max-width: $mobile-landscape){
+      flex-direction: column;
+    }
     .brand{
       display: block;
       .logo{
@@ -128,6 +131,9 @@ section{
       }
     }
     .buttons{
+      @media (max-width: $mobile-landscape){
+        margin-top: 24px;
+      }
       li{
         line-height: 0;
       }
@@ -160,17 +166,26 @@ section{
       position: absolute;
       top: 12px;
       right: 24px;
+
       @media (max-width: $tablet-wide){
         width: 100%;
-        display: none;
       }
       @media (max-width: $desktop){
         right: 10px;
       }
+      @media (max-width: $mobile-landscape){
+        position: relative;
+        text-align: center;
+      }
       img{
         width: 500px;
+
         @media (max-width: $desktop){
           width: 400px;
+        }
+        @media (max-width: $mobile-landscape){
+          width: 200px;
+
         }
       }
     }
@@ -192,6 +207,7 @@ section{
           color: $black;
           @media (max-width: $mobile-landscape){
             font-size: 28px;
+            margin-top: 12px;
           }
         }
         h1{
@@ -204,7 +220,8 @@ section{
           letter-spacing: -1px;
           color: $white;
           @media (max-width: $mobile-landscape){
-            font-size: 44px;
+            font-size: 40px;
+            margin-top: 12px;
           }
           @media (max-width: $tablet-wide){
             padding: 8px 20px;
@@ -229,6 +246,10 @@ section{
 
       .compatible{
         margin: 36px 0;
+        width: 100%;
+        @media (max-width: $mobile-landscape){
+          padding: 12px;
+        }
         h3{
           font-size: 16px;
           letter-spacing: 2px;
@@ -238,6 +259,10 @@ section{
           img{
             height: 24px;
             padding: 0px 8px;
+
+          }
+          span{
+            display: block;
           }
         }
       }
@@ -271,6 +296,9 @@ section{
   margin-top: 120px;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (max-width: $mobile-landscape){
+    margin-top: 30px;
+  }
   .disclamer{
     h2{
 
@@ -282,11 +310,18 @@ section{
     flex-direction: row;
     justify-content: space-between;
     vertical-align: middle;
+    @media (max-width: $mobile-landscape){
+      flex-direction: column;
+    }
     .maker{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       color: $white;
+      @media (max-width: $mobile-landscape){
+        flex-direction: column;
+        text-align: center;
+      }
       h3{
         color: rgba(255,255,255, .7);
         font-weight: 400;
@@ -323,6 +358,9 @@ section{
       }
     }
     .spl-credit{
+      @media (max-width: $mobile-landscape){
+        margin-top: 50px;
+      }
       p{
         color: rgba(255,255,255, .7);
 
@@ -422,11 +460,9 @@ section{
       margin-right: 24px;
       @media (max-width: $mobile-landscape){
         display: block;
-        width: 100%;
       }
       .btn{
         @media (max-width: $mobile-landscape){
-          width: 100%;
         }
       }
       .btn-download{

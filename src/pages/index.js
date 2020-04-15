@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
               </div>
 
               <div className="compatible">
-                <h3>Compitable with <img src="/figma.png"/> <img src="/sketch.png"/> <img src="xd.png"/> <img src="/studio.png"/></h3>
+                <h3>Compitable with <span><img src="/figma.png"/> <img src="/sketch.png"/> <img src="xd.png"/> <img src="/studio.png"/></span></h3>
               </div>
 
               <div className="btn-lnks">
