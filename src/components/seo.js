@@ -33,15 +33,23 @@ const SEO = ({ description, lang, meta, title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content: `wireframe, uikit, open source wireframe kit, contra wireframe kit, free uikit, sketch uikit, figma uikit, realvjy, free wireframe downnload, free sketch uikit, free figma wireframe kit, download wireframe kit, open source uikit, uikit`,
+        },
+        {
+          property: `og:image`,
+          content: `https://contrauikit.com/preview.jpg`,
+        },
+        {
           property: `og:title`,
-          content: title,
+          content: `Contra Wireframe Kit`,
         },
         {
           property: `og:description`,
@@ -52,20 +60,32 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
+          content: `@realvjy`,
+        },
+        {
+          name: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `Contra Wireframe Kit`,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://contrauikit.com/preview.jpg`,
         },
       ].concat(meta)}
     />

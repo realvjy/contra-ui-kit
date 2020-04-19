@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `contrauikit`,
+    title: `Contra Wireframe Kit [Sketch, Figma, Adobe XD, Invision Studio]`,
     author: {
       name: `vijay verma.`,
       summary: `building something for fun.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Open source wireframe kit for quick design and prototyping . Beautifully crafted easy to use wireframe kit with more than 150 mobile components and 50+ screens.`,
     siteUrl: `https://contrauikit.com`,
     social: {
       twitter: `realvjy`,

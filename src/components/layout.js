@@ -9,8 +9,7 @@ const Layout = ({ location, title, children }) => {
       <>
       <div className="announce-wrapper ph">
         <div className="container">
-          <div className="an-details">
-          </div>
+
         </div>
       </div>
       <section className="header_section">
@@ -33,7 +32,7 @@ const Layout = ({ location, title, children }) => {
     <div className="contra_wrap">
         <header>{header}</header>
         <main className="hero_section">{children}</main>
-        
+
       </div>
   )
 }

@@ -110,6 +110,15 @@ img{
 section{
     position: relative;
 }
+::-moz-selection { /* Code for Firefox */
+  color: $yellow;
+  background: $blue;
+}
+
+::selection {
+  color: $yellow;
+  background: $blue;
+}
 
 .contra_wrap{
 
@@ -123,6 +132,7 @@ section{
     padding: 60px 24px 20px 24px;
     @media (max-width: $mobile-landscape){
       flex-direction: column;
+      padding-top: 24px;
     }
     .brand{
       display: block;
@@ -165,7 +175,7 @@ section{
     .hero_img{
       position: absolute;
       top: 12px;
-      right: 24px;
+      right: 0px;
 
       @media (max-width: $tablet-wide){
         width: 100%;
@@ -190,7 +200,7 @@ section{
       }
     }
     .hero_details{
-      width: 50%;
+      width: 55%;
       @media (max-width: $tablet-wide){
         width: 100%;
         padding: 0;
@@ -202,16 +212,17 @@ section{
       .texts{
         h3{
           font-size: 32px;
-          margin-top: 32px;
+          margin-top: 24px;
           margin-bottom: 16px;
           color: $black;
           @media (max-width: $mobile-landscape){
             font-size: 28px;
             margin-top: 12px;
+            text-align: center;
           }
         }
         h1{
-          margin-top: 64px;
+          margin-top: 48px;
           font-size: 58px;
           font-weight: 800;
           line-height: 120%;
@@ -222,6 +233,7 @@ section{
           @media (max-width: $mobile-landscape){
             font-size: 40px;
             margin-top: 12px;
+            text-align: center;
           }
           @media (max-width: $tablet-wide){
             padding: 8px 20px;
@@ -229,51 +241,56 @@ section{
         }
         p{
           margin: 22px 0;
-          font-size: 22px;
+          font-size: 20px;
           color: $grey;
-          line-height: 130%;
+          line-height: 150%;
           font-weight: 400;
           padding-right: 40px;
+
           @media (max-width: $tablet-wide){
             font-size: 18px;
-            padding: 12px;
+            padding: 0 12px;
+            text-align: center;
           }
         }
         strong{
-          font-weight: 700;
+          font-weight: 800;
+          color: $white;
         }
       }
 
       .compatible{
         margin: 36px 0;
-        width: 100%;
         @media (max-width: $mobile-landscape){
           padding: 12px;
         }
-        h3{
-          font-size: 16px;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          color: $grey;
-          font-weight: 400;
-          img{
-            height: 24px;
-            padding: 0px 8px;
-
+        .p-logo{
+          @media (max-width: $mobile-landscape){
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
           }
-          span{
-            display: block;
+          img{
+            height: 30px;
+            padding: 0px 8px;
           }
         }
       }
 
       .license{
         margin-top: 16px;
-        opacity: 0;
+        @media (max-width: $mobile-landscape){
+          text-align: center;
+        }
         p{
           color: $white;
           font-size: 14px;
           font-weight: 400;
+          @media (max-width: $mobile-landscape){
+            font-size: 12px;
+            max-width: 300px;
+            margin: 0 auto;
+          }
           a{
             color: $white;
             font-weight: 600;
@@ -300,9 +317,36 @@ section{
     margin-top: 30px;
   }
   .disclamer{
+    padding: 24px;
     h2{
-
+      color: $white;
+      font-size: 26px;
+      margin: 12px 0;
+      @media (max-width: $mobile-landscape){
+        font-size: 22px;
+      }
     }
+    p{
+      color: rgba(255,255,255, .7);
+      font-weight: 400;
+      font-size: 18px;
+      margin: 12px 0;
+      @media (max-width: $mobile-landscape){
+        font-size: 14px;
+      }
+    }
+    margin-bottom: 50px;
+  }
+  .product{
+    margin: 24px;
+    padding-top: 50px;
+    border-top: 1px dotted rgba(255,255,255,.2);
+    h2{
+      color: $white;
+      font-size: 26px;
+      margin: 12px 0;
+    }
+    margin-bottom: 50px;
   }
   .yeah-credit{
     padding: 32px 24px;
@@ -310,6 +354,7 @@ section{
     flex-direction: row;
     justify-content: space-between;
     vertical-align: middle;
+    border-top: .5px solid rgba(255,255,255,0.2);
     @media (max-width: $mobile-landscape){
       flex-direction: column;
     }
@@ -322,10 +367,22 @@ section{
         flex-direction: column;
         text-align: center;
       }
+
       h3{
         color: rgba(255,255,255, .7);
         font-weight: 400;
         margin-right: 32px;
+        font-size: 14px;
+        @media (max-width: $mobile-landscape){
+          margin: 0;
+        }
+        span{
+          color: $white;
+          @media (max-width: $mobile-landscape){
+            display:block;
+            margin-bottom: 20px;
+          }
+        }
         a{
           font-weight: 600;
           color: $white;
@@ -341,12 +398,17 @@ section{
         justify-content: space-between;
         vertical-align: middle;
         line-height: normal;
+        font-size: 14px;
+        @media (max-width: $mobile-landscape){
+          margin: 12px 24px;
+        }
         >li{
           margin-right: 4px;
           color: rgba(255,255,255, .7);
           a{
             font-weight: 600;
             border-bottom: 1px dotted $grey;
+            margin: 0 8px;
             strong{
               color: $white;
             }
@@ -360,15 +422,24 @@ section{
     .spl-credit{
       @media (max-width: $mobile-landscape){
         margin-top: 50px;
+        text-align: center;
       }
       p{
         color: rgba(255,255,255, .7);
+        font-size: 14px;
+      }
+      span{
+        color: $white;
+        @media (max-width: $mobile-landscape){
+          display: block;
 
+        }
       }
       a{
         font-weight: 600;
         color: $white;
         border-bottom: 1px dotted $grey;
+
         &:hover{
           opacity: .7;
         }
@@ -381,12 +452,12 @@ section{
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  padding: 18px 24px;
+  padding: 20px 24px;
   border-radius: 16px;
   @media (max-width: $mobile-landscape){
   }
   h4{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
   }
   span{
@@ -396,8 +467,8 @@ section{
   }
   &.btn-download{
     background: $black;
-    border:2px solid $black;
-    padding: 20px 36px;
+    border:1px solid $black;
+    padding: 22px 36px;
     cursor: pointer;
     display: inline-block;
     transition: all ease 0.2s;
@@ -406,6 +477,7 @@ section{
     position: relative;
     @media (max-width: $mobile-landscape){
       margin-right: 0;
+      width: 100%;
     }
     h4{
       color: $white;
@@ -414,36 +486,38 @@ section{
       color: $white;
     }
     &:hover{
+      background: lighten($black, 5%);
     }
   }
   &.btn-coffee{
-    background: $yellow;
+    background: $blue;
 
-    border:2px solid $black;
-    padding: 20px;
+    border:1px solid rgba(255,255,255,0.8);
+    padding: 22px;
     cursor: pointer;
     display: inline-block;
     transition: all ease 0.2s;
     border-radius: 16px;
-    z-index: 11;
+    z-index: 8;
     position: relative;
 
     @media (max-width: $mobile-landscape){
       margin-right: 0;
     }
     h4{
-      color: $black;
+      color: $white;
     }
     span{
 
     }
     &:hover{
+      background: darken($blue, 5%);
     }
   }
 }
 
 .btn-lnks{
-  margin-top: 20px;
+  margin-top: 12px;
   display: flex;
   padding: 12px 0;
   @media (max-width: $mobile-landscape){
@@ -455,11 +529,12 @@ section{
       position: relative;
       display: inline-block;
       vertical-align: top;
-      z-index: 8;
+      z-index: 12;
       text-align: center;
       margin-right: 24px;
       @media (max-width: $mobile-landscape){
         display: block;
+        margin-right: 0;
       }
       .btn{
         @media (max-width: $mobile-landscape){
@@ -470,5 +545,98 @@ section{
           margin-bottom: 18px;
         }
       }
+
+      .dwn-list{
+        z-index: 9;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: #fff;
+        border-radius: 8px;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        -webkit-box-shadow: 0 8px 14px -2px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 8px 14px -2px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 14px -2px rgba(0,0,0,0.1);
+        -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+        -moz-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+        -ms-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+        -o-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+        transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+        >li{
+          a{
+            font-size: 16px;
+            font-weight: 700;
+            display: block;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            margin: 0 20px;
+            padding: 16px 0;
+            text-decoration: none;
+            vertical-align: middle;
+            text-align: left;
+            color: $black;
+            img{
+              height: 18px;
+              margin-right: 6px;
+            }
+            &:hover{
+              color: $blue;
+            }
+          }
+          &:last-child{
+            a{
+              border: none;
+            }
+          }
+        }
+      }
+      &:hover{
+        overflow: visible;
+        .dwn-list{
+          overflow: visible;
+          opacity: 1;
+          top: calc(100%);
+          height: auto;
+        }
+        .d-arrow{
+          img{
+            transform: scale(-1, -1);
+          }
+        }
+      }
+  }
+}
+
+
+.announce-wrapper{
+  &.ph{
+    background: #da552f;
+    // background: $black;
+  }
+  .an-details{
+    text-align: center;
+    padding: 10px 20px;
+    p{
+      color: $white;
+      font-size: 22px;
+      line-height: 150%;
+      a{
+        color: $white;
+        text-decoration: none;
+        strong{
+          font-weight: 600;
+        }
+      }
+      img{
+        height: 58px;
+        vertical-align: middle;
+        @media (max-width: $mobile-landscape){
+            display: block;
+            margin: 0 auto;
+        }
+      }
+    }
   }
 }
