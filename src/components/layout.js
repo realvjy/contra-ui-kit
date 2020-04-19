@@ -9,7 +9,10 @@ const Layout = ({ location, title, children }) => {
       <>
       <div className="announce-wrapper ph">
         <div className="container">
-
+          <div className="an-details">
+            <p><img src="/ph-logo.png"/>Featured on Product hunt <a href="https://www.producthunt.com/posts/contra-wireframe-kit?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-contra-wireframe-kit" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=193721&theme=light" alt="Contra Wireframe Kit - Open source wireframe kit for design and prototyping 🚀 | Product Hunt Embed"  /></a>
+            </p>
+          </div>
         </div>
       </div>
       <section className="header_section">
