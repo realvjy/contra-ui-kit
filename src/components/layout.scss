@@ -339,14 +339,39 @@ section{
   }
   .product{
     margin: 24px;
-    padding-top: 50px;
-    border-top: 1px dotted rgba(255,255,255,.2);
     h2{
       color: $white;
       font-size: 26px;
       margin: 12px 0;
     }
     margin-bottom: 50px;
+    .product-wrap{
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media (max-width: $mobile-landscape){
+        flex-direction: column;
+      }
+      .product-box{
+        width: 25%;
+        @media (max-width: $mobile-landscape){
+          width: 100%;
+        }
+        a{
+          display: block;
+          @media (max-width: $mobile-landscape){
+            padding: 24px 0 ;
+          }
+          img{
+            max-height: 40px;
+          }
+          &:hover{
+            opacity: .8;
+          }
+        }
+      }
+    }
   }
   .yeah-credit{
     padding: 32px 24px;

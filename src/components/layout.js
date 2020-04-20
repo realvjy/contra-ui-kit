@@ -10,7 +10,7 @@ const Layout = ({ location, title, children }) => {
       <div className="announce-wrapper ph">
         <div className="container">
           <div className="an-details">
-            <p><img src="/ph-logo.png"/>Featured on Product hunt <a href="https://www.producthunt.com/posts/contra-wireframe-kit?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-contra-wireframe-kit" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=193721&theme=light" alt="Contra Wireframe Kit - Open source wireframe kit for design and prototyping 🚀 | Product Hunt Embed"  /></a>
+            <p><img src="/ph-logo.png"/>Featured on Product hunt <a href="https://www.producthunt.com/posts/contra-wireframe-kit?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-contra-wireframe-kit" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=193721&theme=light&period=daily" alt="Contra Wireframe Kit - Open source wireframe kit for design and prototyping 🚀 | Product Hunt Embed" /></a>
             </p>
           </div>
         </div>
@@ -23,7 +23,7 @@ const Layout = ({ location, title, children }) => {
             </Link>
             <ul className="buttons links">
               <li>
-                <a className="btn-tw" href="https://twitter.com/intent/tweet?text=Design%20awesome%20wireframes%20,%20with%20contra%20wireframekit%20%20https://contrauikit.com%20by%20@realvjy">Share on twitter <img src="/twitter.svg"/></a>
+                <a className="btn-tw" href="https://twitter.com/intent/tweet?text=Design%20awesome%20wireframes%20with%20contra%20wireframe%20kit%20https://contrauikit.com%20by%20@realvjy">Share on twitter <img src="/twitter.svg"/></a>
               </li>
             </ul>
           </nav>
