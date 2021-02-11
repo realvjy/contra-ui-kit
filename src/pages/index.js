@@ -41,7 +41,7 @@ const BlogIndex = ({ data, location }) => {
                   </button>
                   <ul className="dwn-list">
                     <li><a href="https://bit.ly/contra-wireframe-kit-figma"><img src="/figma.png"/> Figma</a></li>
-                    <li><a href="https://bit.ly/contra-wireframe-kit-sketch"><img src="/sketch.png"/> Sketch</a></li>
+                    <li><a href="http://bit.ly/contra-wireframe-kit-sketchapp"><img src="/sketch.png"/> Sketch</a></li>
                     <li><a href="https://bit.ly/contra-wireframe-kit-xd"><img src="xd.png"/> Adobe XD</a></li>
                     <li><a href="https://bit.ly/contra-wireframe-kit-studio"><img src="/studio.png"/> Invision Studio</a></li>
                   </ul>

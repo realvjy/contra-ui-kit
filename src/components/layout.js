@@ -35,7 +35,11 @@ const Layout = ({ location, title, children }) => {
     <div className="contra_wrap">
         <header>{header}</header>
         <main className="hero_section">{children}</main>
-
+        <div className="ad-float">
+          <a href="http://bit.ly/3o05NEX">
+            <img src="bloo-ads.jpg" />
+          </a>
+        </div>
       </div>
   )
 }
